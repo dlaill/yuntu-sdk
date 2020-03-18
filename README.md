@@ -4,9 +4,8 @@
  npm install jiuyuntu
  
 #使用方法
+#认证秘钥根据实际使用平台填写
 var { Convert } = require('jiuyuntu');
-
-***认证秘钥根据实际使用平台填写******
 var convert = new Convert({
 appCode:'xxxx',    //阿里云认证code
 yuntuKey:'xxxx',//九云图自营平台认证key
@@ -14,7 +13,7 @@ appKey:'xxx',
 appSecret:'xxx'// 华为云认证 appkey与appSecret
 });
 
-*****本地转换******
+#本地转换
 convert.convertLocalFile("local-file", { outputType: "" }).then(res => {
     if(res&&res.retCode==0）{
     convert.getOutputResult().then(outputURLs=>{
@@ -23,7 +22,7 @@ convert.convertLocalFile("local-file", { outputType: "" }).then(res => {
     }
 })
 
-*****网络链接转换******
+#网络链接转换
 convert.convertUrl("docurl", { outputType: "" }).then(res => {
     if(res&&res.retCode==0）{
     convert.getOutputResult().then(outputURLs=>{
@@ -32,5 +31,5 @@ convert.convertUrl("docurl", { outputType: "" }).then(res => {
     }
 })
 
-****outputType 可选参数有 webview pdf longimage svgs 详细说明可查看九云图使用说明***
-****outputURLs 为最后获取的结果是一个长度大于0的数组***
+#outputType 可选参数有 webview pdf longimage svgs 详细说明可查看九云图使用说明
+#outputURLs 为最后获取的结果是一个长度大于0的数组
