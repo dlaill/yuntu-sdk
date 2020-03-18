@@ -16,10 +16,14 @@ yuntuKey:'xxxx',//九云图自营平台认证key
 appKey:'xxx',
 
 appSecret:'xxx'// 华为云认证 appkey与appSecret
-});
-convert.convertLocalFile("local-file", { outputType: "" }).then(res => {
 
-    if(res&&res.retCode==0）{
+});
+
+
+convert.convertLocalFile("local-file", { outputType: "" })
+.then(res => {
+
+    if(res&&res.retCode==0）{ 
     
     convert.getOutputResult().then(outputURLs=>{
     
@@ -28,15 +32,15 @@ convert.convertLocalFile("local-file", { outputType: "" }).then(res => {
     }
 })
 
-convert.convertUrl("docurl", { outputType: "" }).then(res => {
-
+convert.convertUrl("docurl", { outputType: "" }) 
+ .then(res => {
+ 
     if(res&&res.retCode==0）{
     
     convert.getOutputResult().then(outputURLs=>{
     
              console.log(outputURLs)
-    })
-    
+    }) 
     }
 })
 
