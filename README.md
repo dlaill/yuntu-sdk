@@ -22,11 +22,8 @@ appSecret:'xxx'// 华为云认证 appkey与appSecret
 
 convert.convertLocalFile("local-file", { outputType: "" })
 .then(res => {
-
     if(res&&res.retCode==0）{ 
-    
     convert.getOutputResult().then(outputURLs=>{
-    
              console.log(outputURLs)
     })
     }
@@ -34,11 +31,8 @@ convert.convertLocalFile("local-file", { outputType: "" })
 
 convert.convertUrl("docurl", { outputType: "" }) 
  .then(res => {
- 
-    if(res&&res.retCode==0）{
-    
+    if(res&&res.retCode==0）{ 
     convert.getOutputResult().then(outputURLs=>{
-    
              console.log(outputURLs)
     }) 
     }
